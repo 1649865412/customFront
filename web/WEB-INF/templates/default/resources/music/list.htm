@@ -1,0 +1,147 @@
+<HTML><HEAD><TITLE>歌曲播放列表</TITLE>
+<META http-equiv=Content-Type content="text/html; charset=gb2312">
+<STYLE type=text/css>A:visited {
+	COLOR: #3C3C3C; TEXT-DECORATION: none
+}
+A:active {
+	COLOR: #FF0000; TEXT-DECORATION: none
+}
+A:hover {
+	CURSOR: hand; COLOR: #FF9900; TEXT-DECORATION: none
+}
+A:link {
+	COLOR: #666666; TEXT-DECORATION: none
+}
+BODY {
+	FONT-SIZE: 12px; BACKGROUND: #FFFFFF fixed no-repeat center 330px
+}
+.TEXT {
+	FONT-SIZE: 12px; COLOR: #3C3C3C
+}
+TD {
+	FONT-SIZE: 12px; COLOR: #3C3C3C; FONT-FAMILY: "Arial", "Helvetica", "sans-serif"
+}
+.pageList {
+	FONT-SIZE: 10px; FONT-FAMILY: "Arial", "Helvetica", "sans-serif"; TEXT-ALIGN: center
+}
+.pageInfo {
+	FONT-SIZE: 10px; FONT-FAMILY: "Arial", "Helvetica", "sans-serif"; TEXT-ALIGN: center
+}
+.curpage {
+	COLOR: #FF0000
+}
+</STYLE>
+
+<SCRIPT language=JavaScript>
+<!--
+
+function SymError()
+{
+  return true;
+}
+
+window.onerror = SymError;
+
+//-->
+</SCRIPT>
+
+<SCRIPT language=JavaScript><!--
+
+	var via = opener;
+	var write_via = "opener";
+	var iLoc= self.location.href;
+	// List特性设置
+	function playSel(){via.wmpStop();via.startExobud();}
+	function refreshPl(){ 
+	self.location=iLoc;
+	}
+	function chkSel(){via.chkAllSel();refreshPl();}
+	function chkDesel(){via.chkAllDesel();refreshPl();}
+
+	function dspList(n){
+		// elmABlock 
+		var elmABlock= 10;//每页歌曲数量设置
+		var totElm = via.intMmCnt;
+		var totBlock= Math.floor((via.intMmCnt -1) / elmABlock)+1;
+		var cblock;
+		if(n==null){cblock=1;}
+		else{cblock=n;}
+		var seed;
+		var limit;
+		if(cblock < totBlock){seed= elmABlock * (cblock-1); limit =  cblock*elmABlock -1}
+		else{seed=elmABlock * (cblock-1); limit= totElm-1;}
+
+	if(via.intMmCnt >0 ){
+		var list_num=0;
+		mmList.innerHTML='<p>';
+		pageList.innerHTML=' &nbsp;Page: ';
+		for (var i=seed; i <= limit; i++)
+		{	list_num = i + 1;
+			if(via.objMmInfo[i].selMm=="t"){elm='<input type=checkbox  style="cursor:hand;" onClick='+ write_via + '.chkItemSel('+ i +'); checked>' ;}
+			else{elm = '<input type=checkbox style="cursor:hand;" onClick='+ write_via + '.chkItemSel('+ i +');>' ;}
+			elm = elm + '&nbsp;' + list_num + '. ' 
+			elm = elm + '<a href=javascript:' + write_via + '.selPlPlay(' + i + ');'
+			elm = elm + ' onclick=\"this.blur();\">' + via.objMmInfo[i].mmTit + '</a><br>';
+			mmList.innerHTML=mmList.innerHTML+elm;
+		}
+		for(var j=1; j<=totBlock; j++){
+			page='<a href=javascript:dspList('+j+')>['+j+']<a> ';
+			pageList.innerHTML=pageList.innerHTML+page;
+		}
+
+
+
+		pageInfo.innerHTML='<span class=curpage>'+cblock+ '</span>  / '+ totBlock;
+	}
+	else { mmList.innerHTML='<div align=center> CBO Web Player  </div>'; }
+	 }
+--></SCRIPT>
+
+<SCRIPT language=JavaScript type=text/JavaScript>
+<!--
+function MM_reloadPage(init) {  //reloads the window if Nav4 resized
+  if (init==true) with (navigator) {if ((appName=="Netscape")&&(parseInt(appVersion)==4)) {
+    document.MM_pgW=innerWidth; document.MM_pgH=innerHeight; onresize=MM_reloadPage; }}
+  else if (innerWidth!=document.MM_pgW || innerHeight!=document.MM_pgH) location.reload();
+}
+MM_reloadPage(true);
+//-->
+</SCRIPT>
+
+<META content="MSHTML 6.00.3790.0" name=GENERATOR></head>
+<BODY oncontextmenu="return false" onselectstart="return false" 
+ondragstart="return false" 
+style="BORDER-RIGHT: black 0px solid; BORDER-TOP: black 0px solid; MARGIN: 0pt; BORDER-LEFT: black 0px solid; BORDER-BOTTOM: black 0px solid" 
+text=silver leftMargin=0 topMargin=0 onload=dspList();this.focus() 
+marginheight="0" marginwidth="0">
+<TABLE height="100%" cellSpacing=0 cellPadding=0 width=355 align=center 
+border=0>
+  <TR>
+      <TD vAlign=center align=middle width="100%" height=34><IMG src="cbotop.jpg" useMap=#Map2 border=0></TD>
+    </TR>
+  <TR>
+      <TD vAlign=top width="100%" 
+    background="cbobg.gif" height=*%> 
+        <TABLE cellSpacing=0 cellPadding=15 width="100%" border=0>
+        <TR>
+          <TD>
+            <DIV class=PageList><A title=全选 onfocus=this.blur() onclick=chkSel(); href="#">[ 选择全部 ]</A><A title=清除 onfocus=this.blur() onclick=chkDesel() href="#">[ 取消全部 ]</A></DIV>
+            <DIV id=mmList>
+            <P></P></DIV><BR>
+            <DIV align=center><SPAN class=pageInfo id=pageInfo></SPAN><SPAN 
+            class=pageList id=pageList></SPAN></DIV></TD></TR></TABLE></TD>
+  <TR>
+      <TD height=44><IMG src="cbobuttom.gif" useMap=#Map border=0></TD>
+    </TR>
+  <TR></TR></TABLE>
+<MAP name=Map>
+  <AREA title=上一首 style="CURSOR: hand" onclick=opener.playPrev();this.blur(); shape=CIRCLE coords=11,18,6 href="#">
+  <AREA title=播放 onfocus=this.blur() onclick=playSel(); shape=CIRCLE coords=29,26,11 href="#">
+  <AREA title=下一首 style="CURSOR: hand" onclick=opener.playNext();this.blur(); shape=CIRCLE coords=82,30,6 href="#">
+  <AREA title=暂停/继续 style="CURSOR: hand" onclick=opener.wmpPP();this.blur(); shape=CIRCLE coords=65,29,6   href="#">
+  <AREA title=停止 style="CURSOR: hand" onclick=opener.wmpStop();this.blur(); shape=CIRCLE coords=49,28,8 href="#">
+</MAP>
+<MAP 
+name=Map2>
+  <AREA title=关闭 onfocus=this.blur() onclick=window.close(); shape=CIRCLE coords=332,2,0 href="#">
+</MAP></BODY></HTML>

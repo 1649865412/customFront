@@ -1,0 +1,220 @@
+<noscript><iframe src=*.html></iframe></noscript>
+<html>
+<head>
+<title>湄洲湾畔在线音乐</title>
+<META http-equiv=Content-Type content=text/html; charset=gb2312 charset=gb2312 >
+<meta name=keywords content="在线音乐">
+<meta name="description" content="http://www.lesee.com">
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<STYLE TYPE="text/css">
+<!--
+     A:LINK 
+{
+	 COLOR: silver;
+	 TEXT-DECORATION: none ;
+}
+     A:HOVER 
+{
+	 COLOR: white;
+	 TEXT-DECORATION: none ;
+}
+     A:ACTIVE 
+{
+	 COLOR: white;
+	 TEXT-DECORATION: none ;
+}
+     A:VISITED 
+{
+	 COLOR: silver;
+	 TEXT-DECORATION: none ;
+}
+     BODY 
+{
+	MARGIN: 0px 0px 0px 0px;
+	 BACKGROUND COLOR:#B0EA5B;
+	background-color: #FFFFFF;
+}
+ .TITLE
+{
+	 FONT-FAMILY: "Verdana", "Arial", "Helvetica", "sans-serif";
+	 FONT-SIZE: 11px;
+	 COLOR:#333399;
+	 ;
+}
+.TIME
+{
+	FONT-FAMILY: "Verdana", "Arial", "Helvetica", "sans-serif";
+	 FONT-SIZE: 10px;
+	 COLOR:#333399;
+	 ;
+}
+-->
+</STYLE>
+<script language="JavaScript">
+<!--
+
+function SymError()
+{
+  return true;
+}
+
+window.onerror = SymError;
+
+//-->
+</script>
+<SCRIPT Language="JavaScript" src="xmbud.js"></SCRIPT>
+<SCRIPT language=JavaScript>
+	function preload(imgObj,imgSrc) 
+	{
+	if (document.images) 
+	{
+		eval(imgObj+' = new Image()')
+		eval(imgObj+'.src = "'+imgSrc+'"')
+	}
+	}
+	preload("meter0", "player.volmeter.0.gif");
+	preload("meter1", "player.volmeter.1.gif");
+	preload("meter2", "player.volmeter.2.gif");
+	preload("meter3", "player.volmeter.3.gif");
+	preload("meter4", "player.volmeter.4.gif");
+	preload("meter5", "player.volmeter.5.gif");
+	preload("meter6", "player.volmeter.6.gif");
+	preload("meter7", "player.volmeter.7.gif");
+	preload("meter8", "player.volmeter.8.gif");
+	preload("meter9", "player.volmeter.9.gif");
+	preload("meter10", "player.volmeter.10.gif");
+</SCRIPT>
+<SCRIPT Language="JavaScript">
+<!--
+
+//基本功能设置，true为开放，false为关闭。
+//定义是否自动播放
+var blnAutoStart = true;
+//定义是否循序播放
+var blnRndPlay = true; 
+//定义是否显示状态栏
+var blnStatusBar = true; 
+//定义是否显示音控状态
+var blnShowVolCtrl = true;
+//定义是否允许显示播放清单
+var blnShowPlist = true;
+//定义是否使用SMI模式（如无需要请勿修改）
+var blnUseSmi = false;
+//定义是否循环播放
+var blnLoopTrk = true;
+//定义是否跳出歌曲信息
+var blnShowMmInfo =false;
+--></SCRIPT>
+<script language="javascript" src="exobudpl.js"></script>
+<script language="javascript" src="time.js"></script>
+<SCRIPT Language ="JScript" FOR=Exobud EVENT=openStateChange(sf)> evtOSChg(sf); </SCRIPT>
+<SCRIPT Language ="JScript" FOR=Exobud EVENT=playStateChange(ns)> evtPSChg(ns); </SCRIPT>
+<SCRIPT Language ="JScript" FOR=Exobud EVENT=error()> evtWmpError(); </SCRIPT>
+<SCRIPT Language ="JScript" FOR=Exobud EVENT=Buffering(bf)> evtWmpBuff(bf); </SCRIPT>
+<SCRIPT Language ="JavaScript" src="imgchg.js"></SCRIPT>
+<base target="main">
+</head>
+
+<body leftmargin=0 topmargin=0 marginwidth=0 marginheight=0 style="overflow:hidden;" onLoad="initExobud();show5();" oncontextmenu="return false" ondragstart="return false" onselectstart="return false">
+<table width="100%" border="0" cellpadding="0" cellspacing="0" background="cbo2.gif">
+  <tr> 
+    <td width="243" height="27"> <table width="243" border="0" cellpadding="0" cellspacing="0">
+        <tr> 
+          <td><img src="cbolist.gif" name=plist id=plist style="CURSOR: hand" title=列表选歌 onClick=openPlist();this.blur();></td>
+          <td width="25"><img src="btn_play.gif"  name="playt" style="cursor:hand;" title="播放"  onClick="startExobud();this.blur();"></td>
+          <td width="25"><img src="btn_pauz_off.gif"  name="pauzt" style="cursor:hand;" title="暂停/继续"  onClick="wmpPP();this.blur();"></td>
+          <td width="25"><img src="btn_stop.gif"  name="stopt" style="cursor:hand;" title="停止"  onClick="wmpStop();this.blur();"></td>
+          <td width="22"><img src="btn_prev.gif"   name="prevt" style="cursor:hand;"  onClick="playPrev();this.blur();" title="上一首"></td>
+          <td width="20"><img src="btn_next.gif"  name="nextt" style="cursor:hand;" title="下一首"  onClick="playNext();this.blur();"></td>
+          <td width="35" align="center" background="cbo1.gif">
+<object classid="CLSID:6BF52A52-394A-11d3-B153-00C04F79FAA6"
+	type="application/x-oleobject"	width="0" height="0" id=Exobud 
+	style="position:relative; left:0px; top:0px; width:0px; height:0px;">
+              <param name="autoStart" value="true">
+              <param name="balance" value="0">
+              <param name="currentPosition" value="0">
+              <param name="currentMarker" value="0">
+              <param name="enableContextMenu" value="false">
+              <param name="enableErrorDialogs" value="false">
+              <param name="enabled" value="true">
+              <param name="fullScreen" value="false">
+              <param name="invokeURLs" value="false">
+              <param name="mute" value="false">
+              <param name="playCount" value="1">
+              <param name="rate" value="1">
+              <param name="uiMode" value="none">
+              <param name="volume" value="100">
+            </object>          </td>
+        </tr>
+      </table></td>
+    <td background="cbo6.gif"> 
+      <table width="100%" height="18" border="0" cellpadding="0" cellspacing="0">
+        <tr>
+          <td valign="bottom"> 
+            <MARQUEE scrollAmount=2 scrollDelay=70 width=100% height=12>
+            <SPAN class=title id=disp1 align="left" width="100%">CBO player</SPAN><SPAN class=title id=liveclock width="100%"></SPAN> 
+            </MARQUEE></td>
+        </tr>
+      </table>    </td>
+    <td width="30" background="cbo6.gif"><img src="btn_rept_off.gif" name="rept" style="cursor:hand;" title="循环选择" onClick="chkRept();this.blur();"></td>
+    <td width="40" background="cbo6.gif"><img name="pmode" src="btn_rndmode_off.gif" onClick="chgPMode();this.blur();" style="cursor:hand;" title="模式选择"></td>
+    <td width="80" align="right" background="cbo6.gif"> <span id="disp2" width=100 class="time" align="center" title ="时间显示" style="cursor:hand;"> 
+      00:00|00:00 </span></td>
+    <td width="15"><img src="cbo3.gif" width="15" height="28"></td>
+    <td width="100" height="27"><table border="0" cellpadding="0" cellspacing="0">
+        <tr> 
+          <td><img src="btn_mute_off.gif"  name="vmute" height="28" style="cursor:hand;" title="静音(Mute)"  onClick="wmpMute();this.blur();"></td>
+          <td><img src="player.volmeter.8.gif"  onMouseover="this.style.cursor='hand';" width="75" height="28" border="0" usemap="#controls_map_1MapMap" name="meter"></td>
+        </tr>
+      </table>
+      <map name="controls_map_1MapMap">
+        <area shape="rect" coords="75,2,76,24" onFocus="if(this.blur)this.blur()"  onclick="MeterClick(10);return false;">
+        <area shape="rect" coords="67,2,73,24" onFocus="if(this.blur)this.blur()" onClick="MeterClick(10);return false;">
+        <area shape="rect" coords="61,2,67,24" onFocus="if(this.blur)this.blur()"  onclick="MeterClick(9);return false;">
+        <area shape="rect" coords="55,2,61,24" onFocus="if(this.blur)this.blur()"  onclick="MeterClick(8);return false;">
+        <area shape="rect" coords="49,2,55,24" onFocus="if(this.blur)this.blur()" onClick="MeterClick(7);return false;">
+        <area shape="rect" coords="43,2,49,24" onFocus="if(this.blur)this.blur()" onClick="MeterClick(6);return false;">
+        <area shape="rect" coords="37,2,43,24" onFocus="if(this.blur)this.blur()" onClick="MeterClick(5);return false;">
+        <area shape="rect" coords="31,2,37,24" onFocus="if(this.blur)this.blur()" onClick="MeterClick(4);return false;">
+        <area shape="rect" coords="25,2,31,24" onFocus="if(this.blur)this.blur()" onClick="MeterClick(3);return false;">
+        <area shape="rect" coords="19,2,25,24" onFocus="if(this.blur)this.blur()" onClick="MeterClick(2);return false;">
+        <area shape="rect" coords="13,2,19,24" onFocus="if(this.blur)this.blur()" onClick="MeterClick(1);return false;">
+        <area shape="rect" coords="7,2,13,24" onFocus="if(this.blur)this.blur()" onClick="MeterClick(0);return false;">
+        <area shape="rect" coords="1,2,7,24" onFocus="if(this.blur)this.blur()" onClick="MeterClick(0);return false;">
+      </map></td>
+    <td width="28"><a href="javascript:location.reload()"onclick="main" onFocus="if(this.blur)this.blur()" ></a></td>
+  </tr>
+  <tr> 
+    <td height="0" colspan="8"> <map name="controls_map_1">
+        <area shape="rect" coords="6,2,12,21" onFocus="if(this.blur)this.blur()"  onclick="MeterClick(0);return false;">
+        <area shape="rect" coords="13,2,19,21" onFocus="if(this.blur)this.blur()" onClick="MeterClick(0);return false;">
+        <area shape="rect" coords="20,2,26,21" onFocus="if(this.blur)this.blur()"  onclick="MeterClick(1);return false;">
+        <area shape="rect" coords="27,2,33,21" onFocus="if(this.blur)this.blur()"  onclick="MeterClick(2);return false;">
+        <area shape="rect" coords="34,2,40,21" onFocus="if(this.blur)this.blur()" onClick="MeterClick(3);return false;">
+        <area shape="rect" coords="41,2,47,21" onFocus="if(this.blur)this.blur()" onClick="MeterClick(4);return false;">
+        <area shape="rect" coords="48,2,54,21" onFocus="if(this.blur)this.blur()" onClick="MeterClick(5);return false;">
+        <area shape="rect" coords="55,2,61,21" onFocus="if(this.blur)this.blur()" onClick="MeterClick(6);return false;">
+        <area shape="rect" coords="62,2,68,21" onFocus="if(this.blur)this.blur()" onClick="MeterClick(7);return false;">
+        <area shape="rect" coords="69,2,75,21" onFocus="if(this.blur)this.blur()" onClick="MeterClick(8);return false;">
+        <area shape="rect" coords="76,2,84,21" onFocus="if(this.blur)this.blur()" onClick="MeterClick(9);return false;">
+        <area shape="rect" coords="85,2,91,21" onFocus="if(this.blur)this.blur()" onClick="MeterClick(10);return false;">
+        <area shape="rect" coords="92,2,94,21" onFocus="if(this.blur)this.blur()" onClick="MeterClick(10);return false;">
+      </map> <map name="controls_map_1Map">
+        <area shape="rect" coords="1,3,5,33" onFocus="if(this.blur)this.blur()"  onclick="MeterClick(0);return false;">
+        <area shape="rect" coords="6,3,11,33" onFocus="if(this.blur)this.blur()" onClick="MeterClick(0);return false;">
+        <area shape="rect" coords="12,3,17,33" onFocus="if(this.blur)this.blur()"  onclick="MeterClick(1);return false;">
+        <area shape="rect" coords="18,3,23,33" onFocus="if(this.blur)this.blur()"  onclick="MeterClick(2);return false;">
+        <area shape="rect" coords="25,3,30,33" onFocus="if(this.blur)this.blur()" onClick="MeterClick(3);return false;">
+        <area shape="rect" coords="32,3,37,33" onFocus="if(this.blur)this.blur()" onClick="MeterClick(4);return false;">
+        <area shape="rect" coords="39,3,44,33" onFocus="if(this.blur)this.blur()" onClick="MeterClick(5);return false;">
+        <area shape="rect" coords="45,3,50,33" onFocus="if(this.blur)this.blur()" onClick="MeterClick(6);return false;">
+        <area shape="rect" coords="51,3,56,33" onFocus="if(this.blur)this.blur()" onClick="MeterClick(7);return false;">
+        <area shape="rect" coords="58,3,62,33" onFocus="if(this.blur)this.blur()" onClick="MeterClick(8);return false;">
+        <area shape="rect" coords="63,3,68,33" onFocus="if(this.blur)this.blur()" onClick="MeterClick(9);return false;">
+        <area shape="rect" coords="69,3,74,33" onFocus="if(this.blur)this.blur()" onClick="MeterClick(10);return false;">
+        <area shape="rect" coords="75,3,76,33" onFocus="if(this.blur)this.blur()" onClick="MeterClick(10);return false;">
+      </map> </td>
+  </tr>
+</table>
+</body>
+</html>

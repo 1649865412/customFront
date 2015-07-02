@@ -1,0 +1,30 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<%@ include file="/common/taglibs.jsp"%>
+<%@ taglib prefix="content" tagdir="/WEB-INF/tags/content"%>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+	<head>
+		<title>${appConfig.store.title}</title>
+		<%@ include file="./include/meta.jspf"%>
+		<meta http-equiv="Pragma" content="no-cache" />
+		<%--<%@ include file="./include/styles.jspf"%>--%>
+		
+		<%--<link href="${resPath}/styles/global.css" rel="stylesheet" type="text/css" />
+		
+		<%@ include file="./include/styles3.jspf"%>--%>
+		<link href="${resPath }/custom/styles/style.css" rel="stylesheet" type="text/css"/>
+		<%@ include file="./include/javascripts.jspf"%>
+		
+		<decorator:head />
+		
+		<script type="text/javascript" src="${ctxPath}/scripts/jquery/plugins/validation/jquery.validate.js"></script>
+		
+	</head>
+	<body <decorator:getProperty property="body.id" writeEntireProperty="true"/>
+		<decorator:getProperty property="body.onload" writeEntireProperty="true"/>
+		<decorator:getProperty property="body.onunload" writeEntireProperty="true"/>>	
+
+				<decorator:body />
+
+	</body>
+</html>
